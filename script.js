@@ -35,12 +35,12 @@ class Deck {
         this.cards.push(new Card(suits[i], ranks[j], j + 1));
       }
     }
-    
+    this.shuffle();
   }
-
-  
+  shuffle() {
+    this.cards = this.cards.sort((a, b) => 0.5 - Math.random());
+  }
 }
 
-let deck = new Deck()
-console.log(deck)
-
+let deck = new Deck();
+console.log(deck);
